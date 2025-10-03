@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Search, SquarePen, ChevronLeft } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import './App.css';
@@ -257,11 +257,34 @@ function App() {
   const handleNoteClick = (noteId: string) => {
     setSelectedNoteId(noteId);
     setShowMobileNote(true);
+    // Push state to browser history for mobile back navigation
+    if (window.innerWidth < 768) {
+      window.history.pushState({ noteId }, '', `#${noteId}`);
+    }
   };
 
   const handleBackClick = () => {
     setShowMobileNote(false);
+    // Use browser back if there's history
+    if (window.history.state?.noteId) {
+      window.history.back();
+    }
   };
+
+  // Handle browser back button and swipe navigation
+  useEffect(() => {
+    const handlePopState = (event: PopStateEvent) => {
+      if (event.state?.noteId) {
+        setSelectedNoteId(event.state.noteId);
+        setShowMobileNote(true);
+      } else {
+        setShowMobileNote(false);
+      }
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
 
   return (
     <div className="min-h-screen font-sans antialiased">
@@ -450,7 +473,7 @@ function App() {
               className="md:hidden flex items-center gap-1 text-[#FF9500] mb-4 hover:opacity-70 transition-opacity"
             >
               <ChevronLeft size={20} strokeWidth={2.5} />
-              <span className="text-[15px] font-medium">Notes</span>
+              <span className="text-[15px] font-medium">back</span>
             </button>
 
             {/* Date and title */}
