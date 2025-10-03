@@ -17,7 +17,7 @@ const notes: Note[] = [
   {
     id: '1',
     emoji: '👋',
-    title: 'about me',
+    title: 'about tanay mishra',
     date: '10/3/2025',
     preview: 'business automation consultant...',
     section: 'pinned',
@@ -27,7 +27,7 @@ if you're looking to make your business faster, easier, more fun and more profit
 
 ### what i do
 
-i help businesses leverage AI agents to cut manual workloads by up to 90% and reassign thousands of hours of work from employees to robots instead
+i help businesses leverage AI agents and automation to cut manual workloads by up to 90% and reassign thousands of hours of work to robots instead
 
 based in **bali, indonesia** 🌴
 
@@ -35,17 +35,17 @@ i work with clients globally to automate tedious, repetitive processes that make
 
 ### certifications & expertise
 
+- clay expert, operator & [coach](https://claybootcamp.com/)
 - [lindy ai certified partner](https://lindy.ai)
-- clay expert, operator & coach
 - business automation strategist
 - infusionsoft/keap specialist
-- chatbot marketing expert
+- manychat chatbot marketing expert
 
 ### let's connect
 
 - [email](mailto:mail@tanaymishra.com)
 - [linkedin](https://www.linkedin.com/in/tanay-mishra-ai-automation/)
-- [start a project](mailto:mail@tanaymishra.com)`
+- [youtube tech tutorials](https://www.youtube.com/@tanaymishra7002)`
   },
   {
     id: '2',
@@ -76,8 +76,8 @@ i work with clients globally to automate tedious, repetitive processes that make
 - eliminate repetitive tasks that drain productivity
 
 **chatbot marketing**
-- build high-converting chatbot funnels
-- manychat & messenger marketing
+- build high-converting instagram and facebook chatbot funnels
+- manychat instagram & messenger automation
 - automated lead qualification
 - 24/7 customer engagement
 
@@ -175,11 +175,6 @@ my clients typically see:
 
 "hiring tanay was the single most important reason we could expand our business and be innovative as we know any idea we come up with tanay has a solution in short order. i trust tanay implicitly with any technical conundrum we could come up with. under pressure tanay delivers time and time again with a better technical solution than i could ever come up with on time every time."
 
-### ashley
-*fast track client*
-
-"i am blown away by the support. this has been the best support i've ever received in any program. and where did you find tanay? he is a godsend! i am blown away!!!! i don't wanna do business or chatbots without him ever again! ❤️"
-
 ### natasha takahashi
 *co-founder, school of bots | cmo, ineffable marketing*
 
@@ -217,7 +212,7 @@ if you're drowning in manual work, spending hours on repetitive tasks, or just k
 ### what happens next?
 
 1. **consultation call** - we'll discuss your biggest automation opportunities
-2. **custom proposal** - i'll outline exactly how we can help & what results to expect
+2. **automation blueprint** - i'll outline exactly how i can help & what results to expect
 3. **implementation** - we build & deploy your automation systems
 4. **support** - ongoing optimization & support to ensure everything runs smoothly
 
