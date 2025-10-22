@@ -353,7 +353,7 @@ function App() {
             {groupedNotes.pinned.length > 0 && (
               <div className="mb-1">
                 <div className="px-4 py-1.5 flex items-center gap-1.5">
-                  <span className="text-[11px] font-bold text-[#8e8e93] uppercase tracking-wider">📌 Pinned</span>
+                  <span className="text-[11px] font-bold text-[#8e8e93] tracking-wider">📌 Pinned</span>
                 </div>
                 {groupedNotes.pinned.map(note => (
                   <div
@@ -381,7 +381,7 @@ function App() {
             {groupedNotes.today.length > 0 && (
               <div className="mb-1">
                 <div className="px-4 py-1.5">
-                  <span className="text-[11px] font-bold text-[#8e8e93] uppercase tracking-wider">Today</span>
+                  <span className="text-[11px] font-bold text-[#8e8e93] tracking-wider">Today</span>
                 </div>
                 {groupedNotes.today.map(note => (
                   <div
@@ -409,7 +409,7 @@ function App() {
             {groupedNotes.yesterday.length > 0 && (
               <div className="mb-1">
                 <div className="px-4 py-1.5">
-                  <span className="text-[11px] font-bold text-[#8e8e93] uppercase tracking-wider">Yesterday</span>
+                  <span className="text-[11px] font-bold text-[#8e8e93] tracking-wider">Yesterday</span>
                 </div>
                 {groupedNotes.yesterday.map(note => (
                   <div
@@ -437,7 +437,7 @@ function App() {
             {groupedNotes.previous7.length > 0 && (
               <div className="mb-1">
                 <div className="px-4 py-1.5">
-                  <span className="text-[11px] font-bold text-[#8e8e93] uppercase tracking-wider">Previous 7 Days</span>
+                  <span className="text-[11px] font-bold text-[#8e8e93] tracking-wider">Previous 7 Days</span>
                 </div>
                 {groupedNotes.previous7.map(note => (
                   <div
@@ -473,7 +473,7 @@ function App() {
               className="md:hidden flex items-center gap-1 text-[#FF9500] mb-4 hover:opacity-70 transition-opacity"
             >
               <ChevronLeft size={20} strokeWidth={2.5} />
-              <span className="text-[15px] font-medium">back</span>
+              <span className="text-[15px] font-medium">Back</span>
             </button>
 
             {/* Date and title */}
