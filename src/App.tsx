@@ -17,221 +17,221 @@ const notes: Note[] = [
   {
     id: '1',
     emoji: '👋',
-    title: 'about tanay mishra',
+    title: 'About Tanay Mishra',
     date: '10/3/2025',
-    preview: 'business automation consultant...',
+    preview: 'Business automation consultant...',
     section: 'pinned',
-    content: `i'm a business automation consultant who helps businesses **save time, grow sales & become more productive**
+    content: `I'm a business automation consultant who helps businesses **save time, grow sales & become more productive**.
 
-if you're looking to make your business faster, easier, more fun and more profitable, we should talk
+If you're looking to make your business faster, easier, more fun and more profitable, we should talk.
 
-### what i do
+### What I Do
 
-i help businesses leverage AI agents and automation to cut manual workloads by up to 90% and reassign thousands of hours of work to robots instead
+I help businesses leverage AI agents and automation to cut manual workloads by up to 90% and reassign thousands of hours of work to robots instead.
 
-based in **bali, indonesia** 🌴
+Based in **Bali, Indonesia** 🌴
 
-i work with clients globally to automate tedious, repetitive processes that make you want to claw your eyes out
+I work with clients globally to automate tedious, repetitive processes that make you want to claw your eyes out.
 
-### certifications & expertise
+### Certifications & Expertise
 
-- clay expert, operator & [coach](https://claybootcamp.com/)
-- [lindy ai certified partner](https://lindy.ai)
-- business automation strategist
-- infusionsoft/keap specialist
-- manychat chatbot marketing expert
+- Clay expert, operator & [coach](https://claybootcamp.com/)
+- [Lindy AI certified partner](https://lindy.ai)
+- Business automation strategist
+- Infusionsoft/Keap specialist
+- ManyChat chatbot marketing expert
 
-### let's connect
+### Let's Connect
 
-- [email](mailto:mail@tanaymishra.com)
-- [linkedin](https://www.linkedin.com/in/tanay-mishra-ai-automation/)
-- [youtube tech tutorials](https://www.youtube.com/@tanaymishra7002)`
+- [Email](mailto:mail@tanaymishra.com)
+- [LinkedIn](https://www.linkedin.com/in/tanay-mishra-ai-automation/)
+- [YouTube Tech Tutorials](https://www.youtube.com/@tanaymishra7002)`
   },
   {
     id: '2',
     emoji: '🚀',
-    title: 'what i do',
+    title: 'What I Do',
     date: '10/3/2025',
-    preview: 'how i help businesses grow...',
+    preview: 'How I help businesses grow...',
     section: 'pinned',
-    content: `making business faster, easier, more fun and more profitable by leveraging automation & ai
+    content: `Making business faster, easier, more fun and more profitable by leveraging automation & AI.
 
-### core services
+### Core Services
 
-**ai agent implementation**
-- cut manual workloads by up to 90%
-- reassign thousands of hours from employees to AI agents
-- lindy ai certified implementation & strategy
+**AI Agent Implementation**
+- Cut manual workloads by up to 90%
+- Reassign thousands of hours from employees to AI agents
+- Lindy AI certified implementation & strategy
 
-**clay automation & outbound**
-- partner with go-to-market teams to automate outbound
-- sales flow automation
-- revenue operations optimization
-- clay expert coaching & implementation
+**Clay Automation & Outbound**
+- Partner with go-to-market teams to automate outbound
+- Sales flow automation
+- Revenue operations optimization
+- Clay expert coaching & implementation
 
-**business process automation**
-- identify bottlenecks & inefficiencies
-- design custom automation workflows
-- integrate tools & systems seamlessly
-- eliminate repetitive tasks that drain productivity
+**Business Process Automation**
+- Identify bottlenecks & inefficiencies
+- Design custom automation workflows
+- Integrate tools & systems seamlessly
+- Eliminate repetitive tasks that drain productivity
 
-**chatbot marketing**
-- build high-converting instagram and facebook chatbot funnels
-- manychat instagram & messenger automation
-- automated lead qualification
+**Chatbot Marketing**
+- Build high-converting Instagram and Facebook chatbot funnels
+- ManyChat Instagram & Messenger automation
+- Automated lead qualification
 - 24/7 customer engagement
 
-### who i work with
+### Who I Work With
 
-- online businesses & info-publishers
-- saas companies
-- consultants & coaches
-- agencies looking to scale
-- any business drowning in manual processes
+- Online businesses & info-publishers
+- SaaS companies
+- Consultants & coaches
+- Agencies looking to scale
+- Any business drowning in manual processes
 
-### results
+### Results
 
-my clients typically see:
+My clients typically see:
 - 50-90% reduction in manual work
-- thousands of hours reassigned to automation
-- improved conversion rates
-- faster response times
-- happier, more productive teams
+- Thousands of hours reassigned to automation
+- Improved conversion rates
+- Faster response times
+- Happier, more productive teams
 
-[schedule a consultation](mailto:mail@tanaymishra.com)`
+[Schedule a Consultation](mailto:mail@tanaymishra.com)`
   },
   {
     id: '3',
     emoji: '💼',
-    title: 'experience',
+    title: 'Experience',
     date: '10/3/2025',
-    preview: 'career & background...',
+    preview: 'Career & background...',
     section: 'today',
-    content: `### current
+    content: `### Current
 
-**business automation consultant**
-*2013 - present | global (based in bali)*
+**Business Automation Consultant**
+*2013 - Present | Global (based in Bali)*
 
-- help businesses automate operations & implement AI agents
-- lindy ai certified partner
-- clay expert, operator & coach
-- specialize in infusionsoft/keap, chatbots, & business process automation
+- Help businesses automate operations & implement AI agents
+- Lindy AI certified partner
+- Clay expert, operator & coach
+- Specialize in Infusionsoft/Keap, chatbots, & business process automation
 
-### previous roles
+### Previous Roles
 
-**data management analyst**
-*2011 - 2013 | accenture, india*
+**Data Management Analyst**
+*2011 - 2013 | Accenture, India*
 
-- worked as business data management analyst & database manager
-- large usa insurance client (allstate)
-- gained foundation in data systems & process optimization
+- Worked as business data management analyst & database manager
+- Large USA insurance client (Allstate)
+- Gained foundation in data systems & process optimization
 
-### key achievements
+### Key Achievements
 
-- helped clients save thousands of hours through automation
-- implemented AI agents that cut workloads by 90%
-- built 100+ automation systems for clients worldwide
-- certified partner with leading automation platforms
-- maintained 100% client satisfaction across 10+ years
+- Helped clients save thousands of hours through automation
+- Implemented AI agents that cut workloads by 90%
+- Built 100+ automation systems for clients worldwide
+- Certified partner with leading automation platforms
+- Maintained 100% client satisfaction across 10+ years
 
-### industries served
+### Industries Served
 
-- info-commerce & online education
-- saas & software
-- professional services
-- healthcare
-- financial services
-- e-commerce
+- Info-commerce & online education
+- SaaS & software
+- Professional services
+- Healthcare
+- Financial services
+- E-commerce
 
-### technical stack
+### Technical Stack
 
-- lindy ai
-- clay
-- infusionsoft/keap
-- manychat & chatbot platforms
-- zapier & make
-- stripe & payment systems
-- various crm & marketing automation tools`
+- Lindy AI
+- Clay
+- Infusionsoft/Keap
+- ManyChat & chatbot platforms
+- Zapier & Make
+- Stripe & payment systems
+- Various CRM & marketing automation tools`
   },
   {
     id: '4',
     emoji: '💬',
-    title: 'client love',
+    title: 'Client Love',
     date: '10/3/2025',
-    preview: 'what people say...',
+    preview: 'What people say...',
     section: 'today',
-    content: `### dane maxwell
-*founder, thefoundation.com*
+    content: `### Dane Maxwell
+*Founder, thefoundation.com*
 
-"tanay is one of the hardest working people i know. this is a man you can trust. his work ethic is insanely high. you can give him anything and he'll do it. you can completely trust tanay with nearly any business project and count on it being completed, either by him, or by someone he will find, without you even having to think about it."
+"Tanay is one of the hardest working people I know. This is a man you can trust. His work ethic is insanely high. You can give him anything and he'll do it. You can completely trust Tanay with nearly any business project and count on it being completed, either by him, or by someone he will find, without you even having to think about it."
 
-### michelle avis
-*co-owner, verge permaculture ca*
+### Michelle Avis
+*Co-owner, Verge Permaculture CA*
 
-"we've worked with tanay for well over 3 years now. he first helped us get infusionsoft setup and get business automation really working for our business and in no time i realised that his skills extended far beyond the application of infusionsoft - that he was a much bigger strategist. we've since continued to bring tanay into our business for projects where we really want to think about how to best strategies our marketing & automation strategy to make things run smoothly. he's delivered tons of value & we really appreciate bringing him on to our team."
+"We've worked with Tanay for well over 3 years now. He first helped us get Infusionsoft setup and get business automation really working for our business and in no time I realised that his skills extended far beyond the application of Infusionsoft - that he was a much bigger strategist. We've since continued to bring Tanay into our business for projects where we really want to think about how to best strategies our marketing & automation strategy to make things run smoothly. He's delivered tons of value & we really appreciate bringing him on to our team."
 
-### bill powell
-*co-founder, the goodness factory*
+### Bill Powell
+*Co-founder, The Goodness Factory*
 
-"hiring tanay was the single most important reason we could expand our business and be innovative as we know any idea we come up with tanay has a solution in short order. i trust tanay implicitly with any technical conundrum we could come up with. under pressure tanay delivers time and time again with a better technical solution than i could ever come up with on time every time."
+"Hiring Tanay was the single most important reason we could expand our business and be innovative as we know any idea we come up with Tanay has a solution in short order. I trust Tanay implicitly with any technical conundrum we could come up with. Under pressure Tanay delivers time and time again with a better technical solution than I could ever come up with on time every time."
 
-### natasha takahashi
-*co-founder, school of bots | cmo, ineffable marketing*
+### Natasha Takahashi
+*Co-founder, School of Bots | CMO, Ineffable Marketing*
 
-"tanay worked with me to create chatbot marketing campaigns for our clients, who are industry leaders in the infocommerce world. he was such a pleasure to work with -- very organized, moves fast to get things done effectively, constantly overdelivering, and strategic in his thought process."
+"Tanay worked with me to create chatbot marketing campaigns for our clients, who are industry leaders in the infocommerce world. He was such a pleasure to work with -- very organized, moves fast to get things done effectively, constantly overdelivering, and strategic in his thought process."
 
-### marina pearson
-*international tedx speaker, author, coach*
+### Marina Pearson
+*International TEDx Speaker, Author, Coach*
 
-"i want to put a big shout out to tanay mishra. wow. he is amazing. i seriously don't know where i would be if tanay wasn't on the team. his dedication and expertise in creating campaigns in infusionsoft, as well as his willingness to throw himself into his role for the team, is something that i have never quite experienced."
+"I want to put a big shout out to Tanay Mishra. Wow. He is amazing. I seriously don't know where I would be if Tanay wasn't on the team. His dedication and expertise in creating campaigns in Infusionsoft, as well as his willingness to throw himself into his role for the team, is something that I have never quite experienced."
 
-[see all testimonials](https://references.tanaymishra.com/)`
+[See All Testimonials](https://references.tanaymishra.com/)`
   },
   {
     id: '5',
     emoji: '📬',
-    title: "let's connect",
+    title: "Let's Connect",
     date: '10/2/2025',
-    preview: 'ready to automate your business?...',
+    preview: 'Ready to automate your business?...',
     section: 'yesterday',
-    content: `### ready to make your business faster, easier & more profitable?
+    content: `### Ready to Make Your Business Faster, Easier & More Profitable?
 
-if you're drowning in manual work, spending hours on repetitive tasks, or just know your business could run smoother... let's talk
+If you're drowning in manual work, spending hours on repetitive tasks, or just know your business could run smoother... let's talk.
 
-### how to reach me
+### How to Reach Me
 
-**email**
+**Email**
 [mail@tanaymishra.com](mailto:mail@tanaymishra.com)
 
-**linkedin**
+**LinkedIn**
 [tanay-mishra-ai-automation](https://www.linkedin.com/in/tanay-mishra-ai-automation/)
 
-**phone/whatsapp**
+**Phone/WhatsApp**
 +62 813 182 32445
 
-### what happens next?
+### What Happens Next?
 
-1. **consultation call** - we'll discuss your biggest automation opportunities
-2. **automation blueprint** - i'll outline exactly how i can help & what results to expect
-3. **implementation** - we build & deploy your automation systems
-4. **support** - ongoing optimization & support to ensure everything runs smoothly
+1. **Consultation Call** - We'll discuss your biggest automation opportunities
+2. **Automation Blueprint** - I'll outline exactly how I can help & what results to expect
+3. **Implementation** - We build & deploy your automation systems
+4. **Support** - Ongoing optimization & support to ensure everything runs smoothly
 
-### based in bali, working globally
+### Based in Bali, Working Globally
 
-while i'm based in beautiful bali, indonesia, i work with clients all over the world. timezone differences have never been an issue - i'm flexible and responsive.
+While I'm based in beautiful Bali, Indonesia, I work with clients all over the world. Timezone differences have never been an issue - I'm flexible and responsive.
 
-### let's work together
+### Let's Work Together
 
-whether you need:
-- ai agent implementation
-- clay automation & outbound
-- chatbot marketing funnels
-- business process optimization
-- custom automation solutions
+Whether you need:
+- AI agent implementation
+- Clay automation & outbound
+- Chatbot marketing funnels
+- Business process optimization
+- Custom automation solutions
 
-i'd love to help you save time, increase productivity & grow your business
+I'd love to help you save time, increase productivity & grow your business.
 
-[start a project](mailto:mail@tanaymishra.com)`
+[Start a Project](mailto:mail@tanaymishra.com)`
   }
 ];
 
