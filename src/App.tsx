@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Search, SquarePen, ChevronLeft } from 'lucide-react';
+import { Search, ChevronLeft } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import './App.css';
 
@@ -318,14 +318,6 @@ function App() {
                   </span>
                 </button>
               </div>
-
-              {/* Compose button */}
-              <button
-                aria-label="Create new note"
-                className="p-2 hover:bg-[#e8e8e6] rounded-md transition-colors"
-              >
-                <SquarePen className="text-[#8e8e93]" size={16} strokeWidth={1.5} />
-              </button>
             </div>
           </div>
 
