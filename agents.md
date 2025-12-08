@@ -241,7 +241,7 @@ Comprehensive SEO implementation for maximum discoverability:
 - **GitHub Repository**: https://github.com/koopazz/tanaymishra
 - **Authentication**: SSH key-based authentication for secure pushes
 - **Hosting**: Cloudflare Pages (free tier)
-- **Live URL**: https://tanaymishra.pages.dev
+- **Live URL**: https://tanaymishra.com
 - **CI/CD**: Automatic deployment on git push to main branch
 - **Build Configuration**:
   - Build command: `npm run build`

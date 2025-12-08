@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tanaymishra.pages.dev/sitemap.xml
+Sitemap: https://tanaymishra.com/sitemap.xml
