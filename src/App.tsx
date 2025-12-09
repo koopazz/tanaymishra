@@ -185,7 +185,7 @@ My clients typically see:
 
 "I want to put a big shout out to Tanay Mishra. Wow. He is amazing. I seriously don't know where I would be if Tanay wasn't on the team. His dedication and expertise in creating campaigns in Infusionsoft, as well as his willingness to throw himself into his role for the team, is something that I have never quite experienced."
 
-[See All Testimonials](https://references.tanaymishra.com/)`
+[See All Testimonials](https://tanaymishra.com/references)`
   },
   {
     id: '5',
