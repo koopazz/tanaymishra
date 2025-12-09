@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wall of Love - Tanay Mishra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-purple: #7c3aed;
+            --primary-orange: #f97316;
+            --primary-yellow: #eab308;
+            --primary-green: #10b981;
+            --primary-pink: #ec4899;
+            --primary-blue: #3b82f6;
+            --bg-color: #f9f9f9;
+            --text-main: #111827;
+            --text-muted: #6b7280;
+            --border-color: #000000;
+        }
+
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+            color: var(--text-main);
+            box-sizing: border-box;
+        }
+
+        *, *::before, *::after {
+            box-sizing: inherit;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            overflow: hidden; /* Prevent child overflow */
+        }
+
+        /* Hero Section */
+        .hero {
+            background: white;
+            border: 3px solid black;
+            border-radius: 32px;
+            padding: 40px;
+            margin-bottom: 60px;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero:nth-child(1) {
+            box-shadow: 12px 12px 0px 0px var(--primary-purple);
+        }
+
+        .hero:nth-child(2) {
+            box-shadow: 12px 12px 0px 0px var(--primary-orange);
+        }
+
+        .hero:nth-child(3) {
+            box-shadow: 12px 12px 0px 0px var(--primary-yellow);
+        }
+
+        .hero:nth-child(4) {
+            box-shadow: 12px 12px 0px 0px var(--primary-green);
+        }
+
+        .hero:nth-child(5) {
+            box-shadow: 12px 12px 0px 0px var(--primary-pink);
+        }
+
+        .hero:nth-child(6) {
+            box-shadow: 12px 12px 0px 0px var(--primary-blue);
+        }
+
+        @media (min-width: 900px) {
+            .hero {
+                flex-direction: row;
+                text-align: left;
+                align-items: center;
+                gap: 48px;
+                padding: 60px;
+            }
+        }
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .hero-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--primary-purple);
+            box-shadow: 0 8px 20px rgba(124, 58, 237, 0.3);
+            flex-shrink: 0;
+        }
+
+        .hero-quote {
+            font-size: 1.5rem;
+            font-weight: 800;
+            line-height: 1.3;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+            color: var(--text-main);
+        }
+
+        @media (min-width: 768px) {
+            .hero-quote {
+                font-size: 1.8rem;
+            }
+        }
+
+        .hero-author {
+            font-size: 1rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .hero-content p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #4b5563;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #6d28d9;
+            color: white;
+            font-weight: 600;
+            padding: 16px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: transform 0.2s, background-color 0.2s;
+            font-size: 1.1rem;
+        }
+
+        .cta-button:hover {
+            background-color: #5b21b6;
+            transform: translateY(-2px);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            width: 100%;
+        }
+
+        @media (min-width: 768px) {
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (min-width: 1100px) {
+             .testimonials-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .testimonial-wrapper {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px; /* Reduced gap for mobile */
+            width: 100%;
+        }
+
+        .card-avatar {
+            width: 48px; /* Smaller avatar on mobile */
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            flex-shrink: 0;
+            z-index: 1;
+        }
+        
+        @media (min-width: 640px) {
+            .card-avatar {
+                width: 64px;
+                height: 64px;
+            }
+        }
+
+        .card-bubble {
+            background: white;
+            border: 2px solid black;
+            border-radius: 24px;
+            padding: 20px;
+            position: relative;
+            flex: 1;
+            transition: transform 0.2s, box-shadow 0.2s;
+            min-width: 0; /* Important for flex child to shrink properly */
+            word-wrap: break-word; /* Prevent overflow */
+        }
+
+        .testimonial-wrapper:nth-child(6n+1) .card-bubble {
+            box-shadow: 6px 6px 0px 0px var(--primary-purple);
+        }
+
+        .testimonial-wrapper:nth-child(6n+2) .card-bubble {
+            box-shadow: 6px 6px 0px 0px var(--primary-orange);
+        }
+
+        .testimonial-wrapper:nth-child(6n+3) .card-bubble {
+            box-shadow: 6px 6px 0px 0px var(--primary-yellow);
+        }
+
+        .testimonial-wrapper:nth-child(6n+4) .card-bubble {
+            box-shadow: 6px 6px 0px 0px var(--primary-green);
+        }
+
+        .testimonial-wrapper:nth-child(6n+5) .card-bubble {
+            box-shadow: 6px 6px 0px 0px var(--primary-pink);
+        }
+
+        .testimonial-wrapper:nth-child(6n+6) .card-bubble {
+            box-shadow: 6px 6px 0px 0px var(--primary-blue);
+        }
+
+        @media (min-width: 640px) {
+            .card-bubble {
+                padding: 24px;
+            }
+
+            .testimonial-wrapper:nth-child(6n+1) .card-bubble {
+                box-shadow: 8px 8px 0px 0px var(--primary-purple);
+            }
+
+            .testimonial-wrapper:nth-child(6n+2) .card-bubble {
+                box-shadow: 8px 8px 0px 0px var(--primary-orange);
+            }
+
+            .testimonial-wrapper:nth-child(6n+3) .card-bubble {
+                box-shadow: 8px 8px 0px 0px var(--primary-yellow);
+            }
+
+            .testimonial-wrapper:nth-child(6n+4) .card-bubble {
+                box-shadow: 8px 8px 0px 0px var(--primary-green);
+            }
+
+            .testimonial-wrapper:nth-child(6n+5) .card-bubble {
+                box-shadow: 8px 8px 0px 0px var(--primary-pink);
+            }
+
+            .testimonial-wrapper:nth-child(6n+6) .card-bubble {
+                box-shadow: 8px 8px 0px 0px var(--primary-blue);
+            }
+
+            .card-bubble:hover {
+                transform: translate(-2px, -2px);
+            }
+
+            .testimonial-wrapper:nth-child(6n+1) .card-bubble:hover {
+                box-shadow: 10px 10px 0px 0px var(--primary-purple);
+            }
+
+            .testimonial-wrapper:nth-child(6n+2) .card-bubble:hover {
+                box-shadow: 10px 10px 0px 0px var(--primary-orange);
+            }
+
+            .testimonial-wrapper:nth-child(6n+3) .card-bubble:hover {
+                box-shadow: 10px 10px 0px 0px var(--primary-yellow);
+            }
+
+            .testimonial-wrapper:nth-child(6n+4) .card-bubble:hover {
+                box-shadow: 10px 10px 0px 0px var(--primary-green);
+            }
+
+            .testimonial-wrapper:nth-child(6n+5) .card-bubble:hover {
+                box-shadow: 10px 10px 0px 0px var(--primary-pink);
+            }
+
+            .testimonial-wrapper:nth-child(6n+6) .card-bubble:hover {
+                box-shadow: 10px 10px 0px 0px var(--primary-blue);
+            }
+        }
+
+        .card-bubble::before {
+            content: "";
+            position: absolute;
+            left: -11px;
+            top: 18px; /* Adjusted for smaller avatar */
+            width: 18px;
+            height: 18px;
+            background: white;
+            border-left: 2px solid black;
+            border-bottom: 2px solid black;
+            transform: rotate(45deg);
+        }
+        
+        @media (min-width: 640px) {
+            .card-bubble::before {
+                 left: -12px;
+                 top: 24px;
+                 width: 20px;
+                 height: 20px;
+            }
+        }
+
+        .stars {
+            color: #fbbf24;
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            letter-spacing: 2px;
+        }
+
+        .card-text {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--text-main);
+            margin-bottom: 16px;
+        }
+
+        .card-text iframe {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 16px;
+            border: none;
+        }
+
+        .card-text img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-top: 16px;
+            border: 2px solid #f3f4f6;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: inline-block;
+        }
+
+        .card-text img:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        /* Image gallery layout for multiple images */
+        .testimonial-images {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .testimonial-images img {
+            margin-top: 0;
+        }
+
+        .card-author {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        
+        .card-author span {
+            color: #d1d5db;
+            margin: 0 4px;
+        }
+        
+        .video-thumbnail {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            display: block;
+        }
+        
+        .video-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="hero">
+        <img src="all-images/dane maxwell.jpg.jpeg" alt="Dane Maxwell" class="hero-avatar">
+        <div class="hero-content">
+            <div class="hero-quote">"Tanay is one of the hardest working people I know. This is a man you can trust. His work ethic is insanely high."</div>
+            <div class="hero-author">&mdash; Dane Maxwell, TheFoundation.com</div>
+            <p>You can give him anything and he'll do it. You can completely trust Tanay with nearly any business project and count on it being completed, either by him, or by someone he will find, without you even having to think about it.</p>
+        </div>
+    </div>
+
+    <div class="hero">
+        <img src="all-images/bill powell.jpg.jpeg" alt="Bill Powell" class="hero-avatar">
+        <div class="hero-content">
+            <div class="hero-quote">"Hiring Tanay was the single most important reason we could expand our business and be innovative."</div>
+            <div class="hero-author">&mdash; Bill Powell, Co-Founder, The Goodness Factory</div>
+            <p>As a small marketing agency it is important that every single team member wears multiple hats, be able to adapt on the fly to the needs of the client, and trust that they can get it done no matter what. I trust Tanay implicitly with any technical conundrum we could come up with. Under pressure Tanay delivers time and time again with a better technical solution than I could ever come up with on time every time.</p>
+        </div>
+    </div>
+
+    <div class="hero">
+        <img src="all-images/dylan bartram.jpg.jpeg" alt="Dylan Bartram" class="hero-avatar">
+        <div class="hero-content">
+            <div class="hero-quote">"Tanay is able to take the ideas that you have and put those into actual systems that make you money."</div>
+            <div class="hero-author">&mdash; Dylan Bartram, Mortgage Loan Advisor NMLS# 1428415</div>
+            <p>Before I started working with Tanay, I would have these ideas on what I would want to do to make my business grow with more automation. Tanay is able to take the ideas that you have (as a creative & as an entrepreneur) and put those into actual systems that make you money - by streamlining your time & streamlining your efficiency.</p>
+        </div>
+    </div>
+
+    <div class="hero">
+        <img src="all-images/andrew pancholi.png" alt="Andrew Pancholi" class="hero-avatar">
+        <div class="hero-content">
+            <div class="hero-quote">"Not only did he deliver what we asked for, he also showed us ways for optimizing our systems."</div>
+            <div class="hero-author">&mdash; Andrew Pancholi, CyclesAnalysis.com</div>
+            <p>Tanay built us an excellent system. Not only did he deliver what we asked for, he also showed us ways for optimizing Infusionsoft so we now have an even better system than we expected. He is efficient, courteous and very easy to work with. We are looking forward to the next phase of working with him!</p>
+        </div>
+    </div>
+
+    <div class="hero">
+        <img src="all-images/michelle avis.jpg.jpeg" alt="Michelle Avis" class="hero-avatar">
+        <div class="hero-content">
+            <div class="hero-quote">"His skills extended far beyond the application - he was a much bigger strategist."</div>
+            <div class="hero-author">&mdash; Michelle Avis, Co-Owner, Verge Permaculture CA</div>
+            <p>We've worked with Tanay for well over 3 years now. He first helped us get Infusionsoft setup and get business automation really working for our business and in no time I realised that his skills extended far beyond the application of Infusionsoft - that he was a much bigger strategist. He's delivered tons of value & we really appreciate bringing him on to our team.</p>
+        </div>
+    </div>
+
+    <div class="hero">
+        <img src="all-images/natasha takahashi.jpg.jpeg" alt="Natasha Takahashi" class="hero-avatar">
+        <div class="hero-content">
+            <div class="hero-quote">"Very organized, moves fast to get things done effectively, constantly overdelivering."</div>
+            <div class="hero-author">&mdash; Natasha Takahashi, Co-Founder, School Of Bots | CMO, Ineffable Marketing</div>
+            <p>Tanay worked with me to create chatbot marketing campaigns for our clients, who are industry leaders in the infocommerce world. He was such a pleasure to work with -- very organized, moves fast to get things done effectively, constantly overdelivering, and strategic in his thought process. If you have the opportunity to work with him on chatbot projects, take it!</p>
+        </div>
+    </div>
+
+    <div class="testimonials-grid">
+    <div class="testimonial-wrapper">
+        <img src="all-images/liz walker.jpg.jpeg" alt="Liz Walker" class="card-avatar">
+        <div class="card-bubble">
+            <div class="stars">★★★★★</div>
+            <div class="card-text">'A HUGE shoutout to Tanay Mishra for the support, love and attention he provided, and continues to provide me on the launch of our new membership site.We had a few challenges along the way, but what impressed me most about Tanay was that he was ALWAYS friendly, polite, and willing to think outside the box.Would I use Tanay's expertise again? Absolutely!THANK YOU Tanay!'</div>
+            <div class="card-author">
+                - Liz Walker <span>•</span> <span style="font-style:italic">KATHRYNLOVEWELL.COM</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="testimonial-wrapper">
+        <img src="all-images/tania allen.jpg.jpeg" alt="Tania Allen" class="card-avatar">
+        <div class="card-bubble">
+            <div class="stars">★★★★★</div>
+            <div class="card-text">'Wow! Is all I can say ... I can't speak highly enough of the quick and responsive support Tanay provided. I had a couple of questions I needed answered and rather than just answering them Tanay went the extra mile by creating a step by step guide to help me in my execution. Now that's what I call above and beyond. Thanks a million!'</div>
+            <div class="card-author">
+                - Tania Allen <span>•</span> <span style="font-style:italic">TANIAALLEN.COM</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="testimonial-wrapper">
+        <img src="all-images/filippos christodoulou.jpg.jpeg" alt="Filippos Christodoulou" class="card-avatar">
+        <div class="card-bubble">
+            <div class="stars">★★★★★</div>
+            <div class="card-text">'The Bot Guys and actually Mr. Tanay helped me so much.As a Business Owner I definitely recommend their services!'</div>
+            <div class="card-author">
+                - Filippos Christodoulou <span>•</span> <span style="font-style:italic">fb.me/FilipposTaekwondoNicosia</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="testimonial-wrapper">
+        <img src="all-images/princess d love.jpg.jpeg" alt="Princess D Love" class="card-avatar">
+        <div class="card-bubble">
+            <div class="stars">★★★★★</div>
+            <div class="card-text">'Tanay has been very proactive, highly supportive and extremely organised.He goes out of his way to find solutions for his clients.He has saved me time, effort and a lot of stress in my otherwise busy work life. I highly recommend him and his services. '</div>
+            <div class="card-author">
+                - Princess D Love <span>•</span> <span style="font-style:italic">CFO & COO, FrontierTrainings.com</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="testimonial-wrapper">
+        <img src="all-images/peter fletcher.jpg.jpeg" alt="Peter Fletcher" class="card-avatar">
+        <div class="card-bubble">
+            <div class="stars">★★★★★</div>
+            <div class="card-text">'You're a champion. A guru even. Thanks a million!'</div>
+            <div class="card-author">
+                - Peter Fletcher <span>•</span> <span style="font-style:italic">Founder, ResidentialSettlements.com.au</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="testimonial-wrapper">
+        <img src="all-images/ronal allen.jpg.jpeg" alt="Ronald Allen" class="card-avatar">
+        <div class="card-bubble">
+            <div class="stars">★★★★★</div>
+            <div class="card-text">'Tanay was an excellent resource to help build out my infusionsoft campaign. Not only did he complete it on time, his explanation helped me be able to follow the complex tagging requirements of the campaign. The campaign is running great, and as a result of the tagging process, I am able to clear and insightful updates on my Infusionsoft dashboard.'</div>
+            <div class="card-author">
+                - Ronald Allen <span>•</span> <span style="font-style:italic">CEO, Exigo Business Solutions</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="testimonial-wrapper">
+        <img src="all-images/marina pearson.jpg.jpeg" alt="Marina Pearson" class="card-avatar">
+        <div class="card-bubble">
+            <div class="stars">★★★★★</div>
+            <div class="card-text">'I want to put a big SHOUT OUT to Tanay Mishra. WOW. He is amazing. I seriously don't know where I would be if Tanay wasn't on the team.His dedication and expertise in creating campaigns in Infusionsoft, as well as his willingness to throw himself into his role for the team, is something that I have never quite experienced.If you are looking to have a passionate techy on your team who has an incredible gift to work with Infusionsoft and someone who goes above and beyond his call of duty, then please pm me and I will introduce you to him.'</div>
+            <div class="card-author">
+                - Marina Pearson <span>•</span> <span style="font-style:italic">International TEDx Speaker, Author, Coach MarinaPearson.com</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="testimonial-wrapper">
+        <img src="https://ui-avatars.com/api/?name=Guillaume+Couillard&background=random&color=fff&size=128" alt="Guillaume Couillard" class="card-avatar">
+        <div class="card-bubble">
+            <div class="stars">★★★★★</div>
+            <div class="card-text">I got WisP for my Business and super happy I made the move; I am amazed at all the possibilities that the software can provide and I'm already taking advantage of most of them. Marc and his team really out did themselves with the WisP software as it's allowing me to take my business to a new level of tracking, control and automation! Well done. I also want to share how please and Happy I am with Tanay Mishra on the WisP support team, as he played a central role in helping me getting it all up and running in the most efficient way; Great work ethic too; thanks for everything Guillaume</div>
+            <div class="card-author">
+                - Guillaume Couillard <span>•</span> <span style="font-style:italic">Montreal, CA</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="testimonial-wrapper">
+        <img src="https://ui-avatars.com/api/?name=Connie+Cooper&background=random&color=fff&size=128" alt="Connie Cooper" class="card-avatar">
+        <div class="card-bubble">
+            <div class="stars">★★★★★</div>
+            <div class="card-text">I hired Information Street to review a complex campaign before I launched it. I worked with Tanay and was very happy with him. He was easy to talk to, a great listener and did a thorough job reviewing my campaign. He was able to detect some errors that would have caused me problems post launch - enabling me to correct them before we got to that point. Tanay was also kind enough to suggest some other products that would help me grow my business. I was happy with the process as well as the end results. Thanks Tanay and Information Street!</div>
+            <div class="card-author">
+                - Connie Cooper <span>•</span> <span style="font-style:italic">Canada</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="testimonial-wrapper">
+        <img src="https://ui-avatars.com/api/?name=Erin+OReilly&background=random&color=fff&size=128" alt="Erin OReilly" class="card-avatar">
+        <div class="card-bubble">
+            <div class="stars">★★★★★</div>
+            <div class="card-text">I could not be more grateful for Tanay's excellent service and assistance. I'm brand new to InfusionSoft and was having some difficulty properly inserting a web form and was unsure of my campaign structure at the time. Tanay was extremely helpful in providing insight and guidance on the app and was very patient. To be honest, I'll probably be needing his help again and when I told him that he was more than happy to accommodate my future needs. This kind of customer service can be hard to find. I'm very happy I was connected with Tanay. Look forward to working with him again in the future!</div>
+            <div class="card-author">
+                - Erin OReilly <span>•</span> <span style="font-style:italic">United States</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="testimonial-wrapper">
+        <img src="https://ui-avatars.com/api/?name=Erin&background=random&color=fff&size=128" alt="Erin" class="card-avatar">
+        <div class="card-bubble">
+            <div class="stars">★★★★★</div>
+            <div class="card-text">United Kingdom
+Tanay has been very helpful and patient while I faffed around activating my Stripe account and re-setting forgotten passwords! It turned out he'd been beavering away behind the scenes, making sure everything was working correctly and setting up a test payment for me to try.
+It worked brilliantly and in the end was very easy to use. Thanks a lot, Tanay, this can all seem baffling at first but you helped me figure it all out!</div>
+            <div class="card-author">
+                - Erin <span>•</span> <span style="font-style:italic">Vicki Workman</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="testimonial-wrapper">
+        <img src="https://ui-avatars.com/api/?name=Ryan+Powell&background=random&color=fff&size=128" alt="Ryan Powell" class="card-avatar">
+        <div class="card-bubble">
+            <div class="stars">★★★★★</div>
+            <div class="card-text">Awesome service! Really responsive and knowledgeable. Tanay got me everything I needed and was polite, patient, and very attentive. Kudos to him and the Team at Info Street, they really care. I couldn't do it without them!
+If you're thinking about Infusionsoft, you've got to hook up with these guys, they make the journey so much less frustrating, and you always know you've got support when you need it most.
+Thanks again Tanay! Can't say enough good things!</div>
+            <div class="card-author">
+                - Ryan Powell <span>•</span> <span style="font-style:italic">United States</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="testimonial-wrapper">
+        <img src="https://ui-avatars.com/api/?name=Micala+Q.&background=random&color=fff&size=128" alt="Micala Q." class="card-avatar">
+        <div class="card-bubble">
+            <div class="stars">★★★★★</div>
+            <div class="card-text">Amazing, thank you!!! I so appreciate you, Tanay! I never would have even come close to figuring that out!</div>
+            <div class="card-author">
+                - Micala Q. <span>•</span> <span style="font-style:italic">Fast Track</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="testimonial-wrapper">
+        <img src="https://ui-avatars.com/api/?name=Kelly+L.&background=random&color=fff&size=128" alt="Kelly L." class="card-avatar">
+        <div class="card-bubble">
+            <div class="stars">★★★★★</div>
+            <div class="card-text">Tanay, thank you so much! This made so much sense, and I appreciate the Loom explaining. :)
+THANK YOU!!!</div>
+            <div class="card-author">
+                - Kelly L. <span>•</span> <span style="font-style:italic">Fast Track</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="testimonial-wrapper">
+        <img src="https://ui-avatars.com/api/?name=Rebecca+P.&background=random&color=fff&size=128" alt="Rebecca P." class="card-avatar">
+        <div class="card-bubble">
+            <div class="stars">★★★★★</div>
+            <div class="card-text">We had great success yesterday following \[Tanay's\] instruction.</div>
+            <div class="card-author">
+                - Rebecca P. <span>•</span> <span style="font-style:italic">Fast Track</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="testimonial-wrapper">
+        <img src="https://ui-avatars.com/api/?name=Shaz+D.&background=random&color=fff&size=128" alt="Shaz D." class="card-avatar">
+        <div class="card-bubble">
+            <div class="stars">★★★★★</div>
+            <div class="card-text">Tanay, thank you so much for taking the time to do this Loom, that was super helpful! Really appreciate it! Will take a look at what you said & build our own list too! 😊</div>
+            <div class="card-author">
+                - Shaz D. <span>•</span> <span style="font-style:italic">Fast Track</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="testimonial-wrapper">
+        <img src="https://ui-avatars.com/api/?name=Juniper+B.&background=random&color=fff&size=128" alt="Juniper B." class="card-avatar">
+        <div class="card-bubble">
+            <div class="stars">★★★★★</div>
+            <div class="card-text">Tanay, you are absolutely delightful and so helpful. I appreciate you so very much. Thank you!</div>
+            <div class="card-author">
+                - Juniper B. <span>•</span> <span style="font-style:italic">Fast Track</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="testimonial-wrapper">
+        <img src="https://ui-avatars.com/api/?name=Jam&background=random&color=fff&size=128" alt="Jam" class="card-avatar">
+        <div class="card-bubble">
+            <div class="stars">★★★★★</div>
+            <div class="card-text">Absolutely makes sense. Thanks a bunch, Tanay, for stepping in and offering your insights. Much appreciated! 😊</div>
+            <div class="card-author">
+                - Jam <span>•</span> <span style="font-style:italic">Alumni</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="testimonial-wrapper">
+        <img src="https://ui-avatars.com/api/?name=Melissa+&+Nick&background=random&color=fff&size=128" alt="Melissa & Nick" class="card-avatar">
+        <div class="card-bubble">
+            <div class="stars">★★★★★</div>
+            <div class="card-text">Shoutout to Tanay for his epic help getting our registration set up!!!</div>
+            <div class="card-author">
+                - Melissa & Nick <span>•</span> <span style="font-style:italic">Team</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="testimonial-wrapper">
+        <img src="https://ui-avatars.com/api/?name=Ashley&background=random&color=fff&size=128" alt="Ashley" class="card-avatar">
+        <div class="card-bubble">
+            <div class="stars">★★★★★</div>
+            <div class="card-text">I am BLOWN away by the support. This has been the best support I've ever received in any program. And where did you find Tanay? He is a godsend! I am blown away!!!! I don't wanna do business or chatbots without him ever again! ❤️</div>
+            <div class="card-author">
+                - Ashley <span>•</span> <span style="font-style:italic">Client</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="testimonial-wrapper">
+        <img src="https://ui-avatars.com/api/?name=Nick+B.&background=random&color=fff&size=128" alt="Nick B." class="card-avatar">
+        <div class="card-bubble">
+            <div class="stars">★★★★★</div>
+            <div class="card-text">Thank you so much, you have been magnificent.</div>
+            <div class="card-author">
+                - Nick B. <span>•</span> <span style="font-style:italic">Client</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="testimonial-wrapper">
+        <img src="https://ui-avatars.com/api/?name=Elizabeth&background=random&color=fff&size=128" alt="Elizabeth" class="card-avatar">
+        <div class="card-bubble">
+            <div class="stars">★★★★★</div>
+            <div class="card-text">I'm cryinggggggg!!! Thanks a lot for this, our Chat funnel is now live and working like a charm!</div>
+            <div class="card-author">
+                - Elizabeth <span>•</span> <span style="font-style:italic">Client</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="testimonial-wrapper">
+        <img src="https://ui-avatars.com/api/?name=Courtney&background=random&color=fff&size=128" alt="Courtney" class="card-avatar">
+        <div class="card-bubble">
+            <div class="stars">★★★★★</div>
+            <div class="card-text">Thanks so much, that makes complete sense. Really appreciate it!</div>
+            <div class="card-author">
+                - Courtney <span>•</span> <span style="font-style:italic">Client</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="testimonial-wrapper">
+        <img src="https://ui-avatars.com/api/?name=Anna+O.&background=random&color=fff&size=128" alt="Anna O." class="card-avatar">
+        <div class="card-bubble">
+            <div class="stars">★★★★★</div>
+            <div class="card-text">Amazing! It worked. Thank you so much, Tanay!</div>
+            <div class="card-author">
+                - Anna O. <span>•</span> <span style="font-style:italic">Fast Track</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="testimonial-wrapper">
+        <img src="https://ui-avatars.com/api/?name=Linnea+P.&background=random&color=fff&size=128" alt="Linnea P." class="card-avatar">
+        <div class="card-bubble">
+            <div class="stars">★★★★★</div>
+            <div class="card-text">This is great, thank you so much, Tanay! I'll have my team start familiarizing with Manychat support inbox and we will follow up with any other questions. Totally understand you can't provide support for the Facebook website widget at this stage/within this program, but it's really helpful for me to know that this is indeed a possibility as it opens up quite a lot of opportunities for later on / thanks!</div>
+            <div class="card-author">
+                - Linnea P. <span>•</span> <span style="font-style:italic">Client</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="testimonial-wrapper">
+        <img src="https://ui-avatars.com/api/?name=Jane+M.&background=random&color=fff&size=128" alt="Jane M." class="card-avatar">
+        <div class="card-bubble">
+            <div class="stars">★★★★★</div>
+            <div class="card-text">Ah thank you!! Makes perfect sense. Appreciate your help :)</div>
+            <div class="card-author">
+                - Jane M. <span>•</span> <span style="font-style:italic">Client</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="testimonial-wrapper">
+        <img src="https://ui-avatars.com/api/?name=M.+J.&background=random&color=fff&size=128" alt="M. J." class="card-avatar">
+        <div class="card-bubble">
+            <div class="stars">★★★★★</div>
+            <div class="card-text">I ok so appreciate that. thank you. Its been workin like amazing and i am so appreciative of everything you have helped me with and your expertise.</div>
+            <div class="card-author">
+                - M. J. <span>•</span> <span style="font-style:italic">Client</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="testimonial-wrapper">
+        <img src="https://ui-avatars.com/api/?name=Michelle+M.&background=random&color=fff&size=128" alt="Michelle M." class="card-avatar">
+        <div class="card-bubble">
+            <div class="stars">★★★★★</div>
+            <div class="card-text">Perfect, thank you! I was able to get it cleared out.</div>
+            <div class="card-author">
+                - Michelle M. <span>•</span> <span style="font-style:italic">Fast Track</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="testimonial-wrapper">
+        <img src="https://ui-avatars.com/api/?name=Emily+S.&background=random&color=fff&size=128" alt="Emily S." class="card-avatar">
+        <div class="card-bubble">
+            <div class="stars">★★★★★</div>
+            <div class="card-text">It seems like Tanay's integrations lessons have done most of the heavy lifting for us 💪💪</div>
+            <div class="card-author">
+                - Emily S. <span>•</span> <span style="font-style:italic">Client</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="testimonial-wrapper">
+        <img src="https://ui-avatars.com/api/?name=Michelle+J.&background=random&color=fff&size=128" alt="Michelle J." class="card-avatar">
+        <div class="card-bubble">
+            <div class="stars">★★★★★</div>
+            <div class="card-text">Thank you so much Tanay! I'm so relieved and excited at the same time. I left a comment for you on the loom. So appreciate your help with everything! 😊</div>
+            <div class="card-author">
+                - Michelle J. <span>•</span> <span style="font-style:italic">Client</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="testimonial-wrapper">
+        <img src="https://ui-avatars.com/api/?name=Dr.+M.+J.&background=random&color=fff&size=128" alt="Dr. M. J." class="card-avatar">
+        <div class="card-bubble">
+            <div class="stars">★★★★★</div>
+            <div class="card-text">Thank you Tanay! 🙏This is awesome! Det looks like it wasn't something I would ever figure out and just appreciate your expertise and assistance with everything. Going to share with patientbase so they are in the loop. Will reach out if any questions come up. Hope you had a wonderful evening and great day tomorrow when you read this :)</div>
+            <div class="card-author">
+                - Dr. M. J. <span>•</span> <span style="font-style:italic">Healthcare Professional</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="testimonial-wrapper">
+        <img src="https://ui-avatars.com/api/?name=Alyssa+S.&background=random&color=fff&size=128" alt="Alyssa S." class="card-avatar">
+        <div class="card-bubble">
+            <div class="stars">★★★★★</div>
+            <div class="card-text">Hey @Tanay, just finished watching your Loom and wanted to circle back to let you know it was incredibly helpful. Thank you again SO much for taking the time to put that together. I think it answered all of my questions, but if anything comes up I will let you know. 😊
+Tanay saves the day!!!! Thank you so much taking the time to make that video answering my questions – that was super helpful. I do have a few follow up questions I'll post below.
+Tanay amazing. THANK YOU for all of that! You rock! 💪I will update everything based on my understanding from watching your Loom video above, and once done I'll DM you with the admin link to double check it all – thank you for offering that, it's very reassuring!
+Tanay, you rock! That helped - I figured it out! Thank you so much :)</div>
+            <div class="card-author">
+                - Alyssa S. <span>•</span> <span style="font-style:italic">Fast Track</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="testimonial-wrapper">
+        <img src="https://ui-avatars.com/api/?name=Laura+M.&background=random&color=fff&size=128" alt="Laura M." class="card-avatar">
+        <div class="card-bubble">
+            <div class="stars">★★★★★</div>
+            <div class="card-text">Thank you so much! No further questions on this, you answered everything for me. Appreciate it!</div>
+            <div class="card-author">
+                - Laura M. <span>•</span> <span style="font-style:italic">Fast Track</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="testimonial-wrapper">
+        <img src="https://ui-avatars.com/api/?name=Valerie+T.&background=random&color=fff&size=128" alt="Valerie T." class="card-avatar">
+        <div class="card-bubble">
+            <div class="stars">★★★★★</div>
+            <div class="card-text">Hi Tanay. I can't thank you enough for all that you have done to help with my funnel.</div>
+            <div class="card-author">
+                - Valerie T. <span>•</span> <span style="font-style:italic">Client</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="testimonial-wrapper">
+        <img src="https://ui-avatars.com/api/?name=Dr.+L.+F.&background=random&color=fff&size=128" alt="Dr. L. F." class="card-avatar">
+        <div class="card-bubble">
+            <div class="stars">★★★★★</div>
+            <div class="card-text">Tanay, thank you SO much for all your help with this!</div>
+            <div class="card-author">
+                - Dr. L. F. <span>•</span> <span style="font-style:italic">Fast Track</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="testimonial-wrapper">
+        <img src="https://ui-avatars.com/api/?name=Varpu+R.&background=random&color=fff&size=128" alt="Varpu R." class="card-avatar">
+        <div class="card-bubble">
+            <div class="stars">★★★★★</div>
+            <div class="card-text">Hi Tanay, I'm literally in tears for your speedy support 😭 Let's do this! I'm here all yours to make this work</div>
+            <div class="card-author">
+                - Varpu R. <span>•</span> <span style="font-style:italic">Client</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="testimonial-wrapper">
+        <img src="https://ui-avatars.com/api/?name=Amy+M.&background=random&color=fff&size=128" alt="Amy M." class="card-avatar">
+        <div class="card-bubble">
+            <div class="stars">★★★★★</div>
+            <div class="card-text">This is great, thank you so much for your quick response and detailed explanation.
+Thank YOU!</div>
+            <div class="card-author">
+                - Amy M. <span>•</span> <span style="font-style:italic">Fast Track</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="testimonial-wrapper">
+        <img src="https://ui-avatars.com/api/?name=Kate+P.&background=random&color=fff&size=128" alt="Kate P." class="card-avatar">
+        <div class="card-bubble">
+            <div class="stars">★★★★★</div>
+            <div class="card-text">Thanks so much for your help @Tanay. We tested the tunnel and it is up and running behind the scenes. Official launch is tomorrow! ⚔️🔥</div>
+            <div class="card-author">
+                - Kate P. <span>•</span> <span style="font-style:italic">Client</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="testimonial-wrapper">
+        <img src="https://ui-avatars.com/api/?name=Wendy+W.&background=random&color=fff&size=128" alt="Wendy W." class="card-avatar">
+        <div class="card-bubble">
+            <div class="stars">★★★★★</div>
+            <div class="card-text">Thanks so much for getting in to it so swiftly and sorting it for me.
+Many thanks for your brilliantly prompt response.</div>
+            <div class="card-author">
+                - Wendy W. <span>•</span> <span style="font-style:italic">Client</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="testimonial-wrapper">
+        <img src="https://ui-avatars.com/api/?name=Becca+S.&background=random&color=fff&size=128" alt="Becca S." class="card-avatar">
+        <div class="card-bubble">
+            <div class="stars">★★★★★</div>
+            <div class="card-text">Tanay, that worked! I appreciate you immensely.</div>
+            <div class="card-author">
+                - Becca S. <span>•</span> <span style="font-style:italic">Client</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="testimonial-wrapper">
+        <img src="https://ui-avatars.com/api/?name=Michelle+Avis+-+Verge+Permaculture+-+Video+Reference+For+Tanay&background=random&color=fff&size=128" alt="Michelle Avis - Verge Permaculture - Video Reference For Tanay" class="card-avatar">
+        <div class="card-bubble">
+            <div class="stars">★★★★★</div>
+            <div class="card-text">
+            <a href="https://www.youtube.com/watch?v=IQThiXv4MXo" target="_blank" class="video-link">
+                <img src="https://img.youtube.com/vi/IQThiXv4MXo/mqdefault.jpg" class="video-thumbnail">
+                <span style="font-weight:600; color: var(--primary-purple);">▶ Watch Video Testimonial</span>
+            </a>
+            </div>
+            <div class="card-author">
+                - Michelle Avis - Verge Permaculture - Video Reference For Tanay <span>•</span> <span style="font-style:italic">Client</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="testimonial-wrapper">
+        <img src="all-images/dane maxwell.jpg.jpeg" alt="Dane Maxwell" class="card-avatar">
+        <div class="card-bubble">
+            <div class="stars">★★★★★</div>
+            <div class="card-text">
+                <a href="https://www.youtube.com/watch?v=yaFf_Kc0hwM" target="_blank" class="video-link">
+                    <img src="https://img.youtube.com/vi/yaFf_Kc0hwM/mqdefault.jpg" class="video-thumbnail">
+                    <span style="font-weight:600; color: var(--primary-purple);">▶ Watch Video Testimonial</span>
+                </a>
+            </div>
+            <div class="card-author">
+                - Dane Maxwell <span>•</span> <span style="font-style:italic">TheFoundation.com</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="testimonial-wrapper">
+        <img src="https://ui-avatars.com/api/?name=F.C.&background=random&color=fff&size=128" alt="F.C." class="card-avatar">
+        <div class="card-bubble">
+            <div class="stars">★★★★★</div>
+            <div class="card-text">
+                <a href="https://www.youtube.com/watch?v=3IyyEGdrnDY" target="_blank" class="video-link">
+                    <img src="https://img.youtube.com/vi/3IyyEGdrnDY/mqdefault.jpg" class="video-thumbnail">
+                    <span style="font-weight:600; color: var(--primary-purple);">▶ Watch Video Testimonial</span>
+                </a>
+            </div>
+            <div class="card-author">
+                - F.C. <span>•</span> <span style="font-style:italic">Client</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="testimonial-wrapper">
+        <img src="all-images/dylan bartram.jpg.jpeg" alt="Dylan Bartram" class="card-avatar">
+        <div class="card-bubble">
+            <div class="stars">★★★★★</div>
+            <div class="card-text">
+                <a href="https://www.youtube.com/watch?v=j0W6cFV18N4" target="_blank" class="video-link">
+                    <img src="https://img.youtube.com/vi/j0W6cFV18N4/mqdefault.jpg" class="video-thumbnail">
+                    <span style="font-weight:600; color: var(--primary-purple);">▶ Watch Video Testimonial</span>
+                </a>
+            </div>
+            <div class="card-author">
+                - Dylan Bartram <span>•</span> <span style="font-style:italic">Mortgage Loan Advisor NMLS# 1428415</span>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+</body>
+</html>
