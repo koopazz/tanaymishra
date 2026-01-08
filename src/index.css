@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-background text-foreground min-h-screen;
+    margin: 0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  }
+}
+
+@layer components {
+  .link {
+    @apply underline underline-offset-4 hover:text-muted transition-colors;
+  }
+
+  .nav-link {
+    @apply text-sm hover:underline underline-offset-4 decoration-foreground;
+  }
+
+  .nav-link-active {
+    @apply text-sm underline underline-offset-4 decoration-foreground;
+  }
+}
+
+/* Prose styles for blog content */
+.prose {
+  @apply text-foreground leading-relaxed;
+}
+
+.prose p {
+  @apply mb-6;
+}
+
+.prose h2 {
+  @apply text-2xl mt-10 mb-4;
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+}
+
+.prose h3 {
+  @apply text-xl mt-8 mb-3;
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+}
+
+.prose ul {
+  @apply list-disc pl-6 mb-6 space-y-2;
+}
+
+.prose ol {
+  @apply list-decimal pl-6 mb-6 space-y-2;
+}
+
+.prose a {
+  @apply underline underline-offset-4 hover:text-muted;
+}
+
+.prose blockquote {
+  @apply border-l-4 border-border pl-4 italic my-6 text-muted;
+}
+
+.prose strong {
+  @apply font-semibold;
+}
