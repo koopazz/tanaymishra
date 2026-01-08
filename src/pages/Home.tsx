@@ -7,35 +7,38 @@ export default function Home() {
       {/* Hero section */}
       <section className="mb-16">
         <p className="text-base md:text-lg leading-relaxed">
-          I'm an AI and automation consultant. I help businesses save time, grow sales, and become more productive by connecting the systems they're building to the outcomes they actually want.
+          I'm a business automation consultant who helps businesses save time, grow sales & become more productive.
         </p>
         <p className="text-base md:text-lg leading-relaxed mt-4">
-          I care deeply about my clients' results. That's why I'm selective about who I work with, and why most relationships span years, not projects. I'm a strategic partner, not a pair of hands.
+          If you're looking to make your business faster, easier, more fun and more profitable, we should talk.
         </p>
         <p className="text-base md:text-lg leading-relaxed mt-4">
-          Based in <strong>Bali, Indonesia</strong>. Working globally.
+          Based in <strong>Bali, Indonesia</strong> 🌴 — working with clients globally to automate tedious, repetitive processes that make you want to claw your eyes out.
         </p>
       </section>
 
       {/* What I Do section */}
       <section className="mb-16">
-        <h2 className="text-2xl md:text-3xl mb-6">What I Do</h2>
+        <h2 className="text-2xl md:text-3xl mb-4">What I Do</h2>
+        <p className="text-base md:text-lg mb-6">
+          I help businesses leverage AI agents and automation to cut manual workloads by up to 90% and reassign thousands of hours of work to robots instead.
+        </p>
         <div className="space-y-4 text-base">
           <div className="border-l-2 border-black pl-4">
             <strong>AI Agent Implementation</strong>
-            <p className="text-muted mt-1">Cut manual workloads by up to 90%. Lindy AI certified partner.</p>
+            <p className="text-muted mt-1">Cut manual workloads by up to 90%. Reassign thousands of hours from employees to AI agents. Lindy AI certified implementation & strategy.</p>
           </div>
           <div className="border-l-2 border-black pl-4">
             <strong>Clay Automation & Outbound</strong>
-            <p className="text-muted mt-1">Expert Clay coaching and implementation for go-to-market teams.</p>
+            <p className="text-muted mt-1">Partner with go-to-market teams to automate outbound. Sales flow automation, revenue operations optimization, and Clay expert coaching & implementation.</p>
           </div>
           <div className="border-l-2 border-black pl-4">
             <strong>Business Process Automation</strong>
-            <p className="text-muted mt-1">Identify bottlenecks, design workflows, eliminate repetitive tasks.</p>
+            <p className="text-muted mt-1">Identify bottlenecks & inefficiencies. Design custom automation workflows, integrate tools & systems seamlessly, and eliminate repetitive tasks that drain productivity.</p>
           </div>
           <div className="border-l-2 border-black pl-4">
             <strong>Chatbot Marketing</strong>
-            <p className="text-muted mt-1">High-converting Instagram and Messenger funnels with ManyChat.</p>
+            <p className="text-muted mt-1">Build high-converting Instagram and Facebook chatbot funnels. ManyChat automation, automated lead qualification, and 24/7 customer engagement.</p>
           </div>
         </div>
       </section>
@@ -93,23 +96,52 @@ export default function Home() {
         <h2 className="text-2xl md:text-3xl mb-6">Certifications & Expertise</h2>
         <ul className="space-y-2 text-base">
           <li>
-            <a href="https://lindy.ai" target="_blank" rel="noopener noreferrer" className="link">
-              Lindy AI Certified Partner
-            </a>
-          </li>
-          <li>
             <a href="https://claybootcamp.com/" target="_blank" rel="noopener noreferrer" className="link">
               Clay Expert, Operator & Coach
             </a>
           </li>
+          <li>
+            <a href="https://lindy.ai" target="_blank" rel="noopener noreferrer" className="link">
+              Lindy AI Certified Partner
+            </a>
+          </li>
+          <li>Business Automation Strategist</li>
           <li>Infusionsoft/Keap Specialist</li>
           <li>ManyChat Chatbot Marketing Expert</li>
+        </ul>
+      </section>
+
+      {/* Who I Work With */}
+      <section className="mb-16">
+        <h2 className="text-2xl md:text-3xl mb-6">Who I Work With</h2>
+        <ul className="space-y-2 text-base">
+          <li>Online businesses & info-publishers</li>
+          <li>SaaS companies</li>
+          <li>Consultants & coaches</li>
+          <li>Agencies looking to scale</li>
+          <li>Any business drowning in manual processes</li>
+        </ul>
+      </section>
+
+      {/* Results */}
+      <section className="mb-16">
+        <h2 className="text-2xl md:text-3xl mb-6">Results</h2>
+        <p className="text-base mb-4">My clients typically see:</p>
+        <ul className="space-y-2 text-base">
+          <li>50-90% reduction in manual work</li>
+          <li>Thousands of hours reassigned to automation</li>
+          <li>Improved conversion rates</li>
+          <li>Faster response times</li>
+          <li>Happier, more productive teams</li>
         </ul>
       </section>
 
       {/* CTA */}
       <section className="bg-highlight border border-black p-6 md:p-8">
         <h2 className="text-2xl md:text-3xl mb-4">Ready to Automate?</h2>
+        <p className="mb-4">
+          Making business faster, easier, more fun and more profitable by leveraging automation & AI.
+        </p>
         <p className="mb-6">
           If you're drowning in manual work, spending hours on repetitive tasks, or know your business could run smoother — let's talk.
         </p>
