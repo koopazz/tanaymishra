@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage - Clay Expert, Lindy AI Partner, AI Automation Consultant -->
+  <url>
+    <loc>https://tanaymishra.com/</loc>
+    <lastmod>2025-02-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Articles Index - AI Automation & Business Process Guides -->
+  <url>
+    <loc>https://tanaymishra.com/articles</loc>
+    <lastmod>2025-02-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Article: Lindy AI Certified Partner -->
+  <url>
+    <loc>https://tanaymishra.com/articles/top-rated-lindy-certified-partner-for-hire</loc>
+    <lastmod>2025-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Article: AI Automations for Online Businesses -->
+  <url>
+    <loc>https://tanaymishra.com/articles/5-most-effective-automations-for-online-businesses</loc>
+    <lastmod>2024-11-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Article: Sales Copy Conversion -->
+  <url>
+    <loc>https://tanaymishra.com/articles/pre-qualification</loc>
+    <lastmod>2024-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Article: Customer Lifecycle -->
+  <url>
+    <loc>https://tanaymishra.com/articles/the-perfect-customer-lifecycle</loc>
+    <lastmod>2024-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- References/Testimonials -->
+  <url>
+    <loc>https://tanaymishra.com/references</loc>
+    <lastmod>2025-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://tanaymishra.com/contact</loc>
+    <lastmod>2025-02-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+</urlset>

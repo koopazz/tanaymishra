@@ -1,10 +1,34 @@
 import { Link } from 'react-router-dom'
 import { articles } from '../data/articles'
+import SEO, { generateBreadcrumbSchema } from '../components/SEO'
 
 export default function Articles() {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      generateBreadcrumbSchema([
+        { name: 'Home', url: '/' },
+        { name: 'Articles', url: '/articles' },
+      ]),
+      {
+        '@type': 'CollectionPage',
+        name: 'AI Automation & Clay Articles',
+        description: 'Expert guides on Clay automation, Lindy AI agents, business process automation, and AI-powered sales strategies.',
+        url: 'https://tanaymishra.com/articles',
+      },
+    ],
+  }
+
   return (
     <div className="max-w-4xl mx-auto">
-      <h1 className="text-4xl md:text-5xl lg:text-6xl mb-12">Articles</h1>
+      <SEO
+        canonicalUrl="/articles"
+        title="AI Automation Articles | Clay Guides & Lindy AI Tips"
+        description="Expert articles on Clay automation, Lindy AI agent implementation, business process automation, and AI-powered sales strategies. Learn how to automate your business with AI agents."
+        keywords="Clay automation guide, Lindy AI tutorial, AI agents for business, automation tips, Clay expert advice, AI automation articles, business automation guides, outbound sales automation"
+        structuredData={structuredData}
+      />
+      <h1 className="text-4xl md:text-5xl lg:text-6xl mb-12">Articles on AI Automation & Clay</h1>
 
       <div className="space-y-1">
         {/* Timeline gradient cap */}

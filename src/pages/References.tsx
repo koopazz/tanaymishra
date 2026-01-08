@@ -1,12 +1,36 @@
 import { testimonials } from '../data/testimonials'
+import SEO, { generateBreadcrumbSchema } from '../components/SEO'
 
 export default function References() {
   const featured = testimonials.filter(t => t.featured)
   const others = testimonials.filter(t => !t.featured)
 
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      generateBreadcrumbSchema([
+        { name: 'Home', url: '/' },
+        { name: 'References', url: '/references' },
+      ]),
+      {
+        '@type': 'WebPage',
+        name: 'Client Testimonials - AI Automation Consultant',
+        description: 'Client testimonials and references for Tanay Mishra, Clay expert and Lindy AI certified partner.',
+        url: 'https://tanaymishra.com/references',
+      },
+    ],
+  }
+
   return (
     <div className="max-w-4xl mx-auto">
-      <h1 className="text-4xl md:text-5xl lg:text-6xl mb-8">References</h1>
+      <SEO
+        canonicalUrl="/references"
+        title="Client Testimonials | Clay & AI Automation Results"
+        description="Read testimonials from clients who have worked with Tanay Mishra on Clay automation, Lindy AI implementation, and business process automation. Real results from real businesses."
+        keywords="Clay consultant testimonials, AI automation reviews, Lindy AI partner reviews, business automation results, client testimonials, automation consultant reviews"
+        structuredData={structuredData}
+      />
+      <h1 className="text-4xl md:text-5xl lg:text-6xl mb-8">Client References & Testimonials</h1>
 
       {/* Positioning statement */}
       <div className="mb-16 text-base md:text-lg leading-relaxed">
