@@ -18,7 +18,7 @@ const homeFAQs = [
   },
   {
     question: 'How much does Lindy AI agent automation consulting cost?',
-    answer: 'Lindy AI automation consulting typically starts from $1,000 onwards per project, depending on complexity. This includes workflow design, manual process automation, and integration with your existing CRM and sales tools. Most Lindy automation build projects have a turnaround time of 1-2 weeks.',
+    answer: 'Lindy AI automation consulting typically starts from $5,000 onwards per project, depending on complexity. This includes workflow design, manual process automation, and integration with your existing CRM and sales tools. Most Lindy automation build projects have a turnaround time of 1-2 weeks.',
   },
   {
     question: 'What is the difference between Clay and Lindy AI?',
