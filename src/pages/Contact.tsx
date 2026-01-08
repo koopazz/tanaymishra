@@ -1,7 +1,43 @@
+import SEO, { generateBreadcrumbSchema } from '../components/SEO'
+
 export default function Contact() {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      generateBreadcrumbSchema([
+        { name: 'Home', url: '/' },
+        { name: 'Contact', url: '/contact' },
+      ]),
+      {
+        '@type': 'ContactPage',
+        name: 'Contact Tanay Mishra - AI Automation Consultant',
+        description: 'Get in touch for Clay automation consulting, Lindy AI implementation, or AI agent development services.',
+        url: 'https://tanaymishra.com/contact',
+        mainEntity: {
+          '@type': 'Person',
+          name: 'Tanay Mishra',
+          email: 'mail@tanaymishra.com',
+          telephone: '+62-813-182-32445',
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: 'Bali',
+            addressCountry: 'Indonesia',
+          },
+        },
+      },
+    ],
+  }
+
   return (
     <div className="max-w-2xl mx-auto">
-      <h1 className="text-4xl md:text-5xl lg:text-6xl mb-8">Let's Connect</h1>
+      <SEO
+        canonicalUrl="/contact"
+        title="Contact | Hire a Clay Expert & Lindy AI Partner"
+        description="Contact Tanay Mishra for Clay automation consulting, Lindy AI implementation, and AI agent development. Based in Bali, working with clients globally. Schedule a free consultation."
+        keywords="hire Clay consultant, contact Clay expert, Lindy AI consultation, AI automation quote, hire AI agent developer, business automation consultation, Clay expert contact"
+        structuredData={structuredData}
+      />
+      <h1 className="text-4xl md:text-5xl lg:text-6xl mb-8">Hire a Clay & AI Automation Expert</h1>
 
       <div className="mb-12 text-base md:text-lg leading-relaxed">
         <p className="mb-4">
