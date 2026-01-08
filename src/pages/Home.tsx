@@ -13,7 +13,7 @@ export default function Home() {
           If you're looking to make your business faster, easier, more fun and more profitable, we should talk.
         </p>
         <p className="text-base md:text-lg leading-relaxed mt-4">
-          Based in <strong>Bali, Indonesia</strong> 🌴 — working with clients globally to automate tedious, repetitive processes that make you want to claw your eyes out.
+          Based in <strong>Bali, Indonesia</strong> — working with clients globally to automate tedious, repetitive processes that make you want to claw your eyes out.
         </p>
       </section>
 
