@@ -17,8 +17,8 @@ const homeFAQs = [
     answer: 'AI agents are autonomous software programs powered by artificial intelligence that can perform tasks, make decisions, and interact with systems on behalf of humans. Unlike simple chatbots, AI agents can handle complex multi-step workflows, learn from interactions, and integrate with your existing business tools. Businesses use AI agents to automate customer support, sales qualification, scheduling, data entry, and operations tasks.',
   },
   {
-    question: 'How much does Clay automation consulting cost?',
-    answer: 'Clay automation consulting typically starts from $1,000 onwards per project, depending on complexity. This includes workflow design, Clay table setup, data enrichment configuration, and integration with your existing CRM and sales tools. Most Clay automation projects have a turnaround time of 1-2 weeks.',
+    question: 'How much does Lindy AI agent automation consulting cost?',
+    answer: 'Lindy AI automation consulting typically starts from $1,000 onwards per project, depending on complexity. This includes workflow design, manual process automation, and integration with your existing CRM and sales tools. Most Lindy automation build projects have a turnaround time of 1-2 weeks.',
   },
   {
     question: 'What is the difference between Clay and Lindy AI?',
