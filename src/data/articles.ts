@@ -44,7 +44,7 @@ My past client accounts include some of the largest content creators in the worl
 
 Do you want to see if Lindy AI can help grow your business? Then [schedule a free 30-min consultation](mailto:mail@tanaymishra.com) with me.
 
-**Prices start from $1000 onwards per build. Average turnaround time is approximately 1-2 weeks depending on technical complexity.**`
+**Prices start from $5000 onwards per build. Average turnaround time is approximately 1-2 weeks depending on technical complexity.**`
   },
   {
     slug: '5-most-effective-automations-for-online-businesses',
