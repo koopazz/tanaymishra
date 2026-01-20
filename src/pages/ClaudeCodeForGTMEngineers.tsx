@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import SEO, { generateCourseSchema, generateFAQSchema } from '../components/SEO'
+import SignupModal from '../components/SignupModal'
 
 const courseFAQs = [
   {
@@ -24,10 +25,9 @@ const courseFAQs = [
   },
 ]
 
-const SIGNUP_LINK = '#signup'
-
 export default function ClaudeCodeForGTMEngineers() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   const structuredData = {
     '@context': 'https://schema.org',
@@ -84,12 +84,12 @@ export default function ClaudeCodeForGTMEngineers() {
 
       {/* Primary CTA */}
       <section className="bg-highlight border border-black p-6 md:p-8 mb-12 text-center">
-        <a
-          href={SIGNUP_LINK}
+        <button
+          onClick={() => setIsModalOpen(true)}
           className="inline-block bg-black text-background px-8 py-4 text-lg font-medium hover:bg-foreground/80 transition-colors"
         >
           Get the Free Course
-        </a>
+        </button>
         <p className="text-sm text-muted mt-4">Join 500+ GTM professionals learning Claude Code</p>
       </section>
 
@@ -235,12 +235,12 @@ export default function ClaudeCodeForGTMEngineers() {
 
       {/* Secondary CTA */}
       <section className="bg-highlight border border-black p-6 md:p-8 mb-12 text-center">
-        <a
-          href={SIGNUP_LINK}
+        <button
+          onClick={() => setIsModalOpen(true)}
           className="inline-block bg-black text-background px-8 py-4 text-lg font-medium hover:bg-foreground/80 transition-colors"
         >
           Get the Free Course
-        </a>
+        </button>
         <p className="text-sm text-muted mt-4">4 modules. Hands-on projects. Built for non-technical GTM professionals.</p>
       </section>
 
@@ -292,12 +292,12 @@ export default function ClaudeCodeForGTMEngineers() {
 
       {/* Final CTA */}
       <section className="bg-highlight border border-black p-6 md:p-8 mb-12 text-center">
-        <a
-          href={SIGNUP_LINK}
+        <button
+          onClick={() => setIsModalOpen(true)}
           className="inline-block bg-black text-background px-8 py-4 text-lg font-medium hover:bg-foreground/80 transition-colors"
         >
           Start Learning Claude Code Today
-        </a>
+        </button>
         <p className="text-sm text-muted mt-4">Free course. No fluff. Built for GTM professionals.</p>
       </section>
 
@@ -316,6 +316,9 @@ export default function ClaudeCodeForGTMEngineers() {
           {' '}| Claude Code Academy
         </p>
       </footer>
+
+      {/* Signup Modal */}
+      <SignupModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   )
 }
