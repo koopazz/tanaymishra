@@ -72,7 +72,7 @@ export default function ClaudeCodeForGTMEngineers() {
           If you've seen people on LinkedIn posting about Claude Code and felt that twinge of <em>I should probably figure this out</em> — you're in the right place.
         </p>
         <p className="text-base leading-relaxed mb-6">
-          I'm <a href="https://www.linkedin.com/in/tanaymishra/" target="_blank" rel="noopener noreferrer" className="link">Tanay Mishra</a>. I'm not a developer. I'm a GTM engineer who coaches at Clay Bootcamp and has spent 10+ years in marketing automation.
+          I'm <a href="https://www.linkedin.com/in/tanay-mishra-ai-automation/" target="_blank" rel="noopener noreferrer" className="link">Tanay Mishra</a>. I'm not a developer. I'm a GTM engineer who coaches at Clay Bootcamp and has spent 10+ years in marketing automation.
         </p>
         <p className="text-base leading-relaxed mb-6">
           When Claude Code dropped, I had the same reaction you probably did: <strong>this looks powerful, but I have no idea where to start.</strong>
@@ -223,7 +223,7 @@ export default function ClaudeCodeForGTMEngineers() {
             GTM Engineer. Clay Bootcamp Coach. 10+ years in marketing automation (Infusionsoft → ManyChat → Zapier → Make → n8n → Clay → Claude Code). I'm not a developer — I just figure things out and teach others how to do the same.
           </p>
           <a
-            href="https://www.linkedin.com/in/tanaymishra/"
+            href="https://www.linkedin.com/in/tanay-mishra-ai-automation/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block mt-4 link"
@@ -306,7 +306,7 @@ export default function ClaudeCodeForGTMEngineers() {
         <p>
           Built by{' '}
           <a
-            href="https://www.linkedin.com/in/tanaymishra/"
+            href="https://www.linkedin.com/in/tanay-mishra-ai-automation/"
             target="_blank"
             rel="noopener noreferrer"
             className="link"
