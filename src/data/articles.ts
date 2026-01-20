@@ -5,9 +5,19 @@ export interface Article {
   excerpt: string
   content: string
   featured?: boolean
+  url?: string // Optional custom URL for standalone pages
 }
 
 export const articles: Article[] = [
+  {
+    slug: 'claude-code-for-gtm-engineers',
+    title: 'Claude Code for GTM Engineers',
+    date: 'January 20, 2026',
+    excerpt: 'A free course teaching non-technical GTM, RevOps, and Sales Ops professionals how to use Claude Code — the tool everyone\'s talking about but few know how to actually use.',
+    featured: true,
+    url: '/claude-code-for-gtm-engineers',
+    content: '', // Content is on the standalone page
+  },
   {
     slug: 'top-rated-lindy-certified-partner-for-hire',
     title: 'Top Rated Lindy AI Certified Partner For Hire',

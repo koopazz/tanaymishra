@@ -42,7 +42,7 @@ export default function Articles() {
         {articles.map((article) => (
           <Link
             key={article.slug}
-            to={`/articles/${article.slug}`}
+            to={article.url || `/articles/${article.slug}`}
             className="flex items-stretch group"
           >
             <div className="w-2 flex-shrink-0 mr-4 flex flex-col items-center">

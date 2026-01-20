@@ -295,3 +295,28 @@ export const generateBreadcrumbSchema = (items: Array<{ name: string; url: strin
     item: `${BASE_URL}${item.url}`,
   })),
 })
+
+export const generateCourseSchema = (course: {
+  name: string
+  description: string
+  url: string
+  provider?: string
+}) => ({
+  '@context': 'https://schema.org',
+  '@type': 'Course',
+  name: course.name,
+  description: course.description,
+  url: `${BASE_URL}${course.url}`,
+  provider: {
+    '@type': 'Person',
+    name: course.provider || 'Tanay Mishra',
+    url: BASE_URL,
+  },
+  isAccessibleForFree: true,
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'USD',
+    availability: 'https://schema.org/InStock',
+  },
+})

@@ -5,6 +5,7 @@ import Articles from './pages/Articles'
 import Article from './pages/Article'
 import References from './pages/References'
 import Contact from './pages/Contact'
+import ClaudeCodeForGTMEngineers from './pages/ClaudeCodeForGTMEngineers'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="articles/:slug" element={<Article />} />
         <Route path="references" element={<References />} />
         <Route path="contact" element={<Contact />} />
+        <Route path="claude-code-for-gtm-engineers" element={<ClaudeCodeForGTMEngineers />} />
       </Route>
     </Routes>
   )
