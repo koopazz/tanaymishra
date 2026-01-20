@@ -121,9 +121,21 @@ export default function SignupModal({ isOpen, onClose }: SignupModalProps) {
         {submitStatus === 'success' ? (
           <div className="text-center py-8">
             <div className="text-4xl mb-4">&#10003;</div>
-            <h3 className="text-xl font-medium mb-2">You're in!</h3>
+            <h3 className="text-xl font-medium mb-2">Thank you for your interest!</h3>
+            <p className="text-muted mb-4">
+              We have placed you on the waitlist. This course is still under active development.
+            </p>
             <p className="text-muted mb-6">
-              Check your inbox for access to the Claude Code for GTM Engineers course.
+              For early access, please connect with Tanay on{' '}
+              <a
+                href="https://www.linkedin.com/in/tanay-mishra-ai-automation/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground underline hover:no-underline"
+              >
+                LinkedIn
+              </a>
+              .
             </p>
             <button
               onClick={onClose}
